@@ -2,245 +2,316 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>StyleSpeech2 Audio Demo</title>
-  <link rel="stylesheet" href="style.css">
+  <title>TTS Audio Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f7f7f7;
+      padding: 40px;
+    }
+    h1, h2 {
+      margin-top: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      margin-bottom: 40px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #f0f0f0;
+    }
+    audio {
+      width: 100px;
+    }
+  </style>
 </head>
 <body>
-  <h1>StyleSpeech2 Audio Demo</h1>
-  <p class="subtitle">Audio samples across various configurations, languages, and token types.</p>
 
-  <section>
-    <h2>FastSpeech2</h2>
-    <div class="audio-row">
-      <div>
-        <p>Chinese</p>
-        <audio controls src="audio/fastspeech2/ch_0.wav"></audio>
-        <audio controls src="audio/fastspeech2/ch_1.wav"></audio>
-        <audio controls src="audio/fastspeech2/ch_2.wav"></audio>
+  <h1>LanStyleTTS Audio Demo</h1>
 
-      </div>
-      <div>
-        <p>English</p>
-        <audio controls src="audio/fastspeech2/en_0.wav"></audio>
-        <audio controls src="audio/fastspeech2/en_1.wav"></audio>
-        <audio controls src="audio/fastspeech2/en_2.wav"></audio>
-      </div>
-    </div>
-  </section>
+  <h2>Model Comparison</h2>
+  <table>
+    <tr>
+      <th>Method</th>
+      <th>Chinese</th>
+      <th>English</th>
+    </tr>
 
-  <section>
-    <h2>StyleSpeech</h2>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech/en_2.wav"></audio>
-        </div>
-    </div>
-  </section>
+    <tr>
+      <td>FastSpeech2</td>
+        <td>
+            <audio controls src="audio/fastspeech2/ch_0.wav"></audio>
+            <audio controls src="audio/fastspeech2/ch_1.wav"></audio>
+            <audio controls src="audio/fastspeech2/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/fastspeech2/en_0.wav"></audio>
+            <audio controls src="audio/fastspeech2/en_1.wav"></audio>
+            <audio controls src="audio/fastspeech2/en_2.wav"></audio>
+        </td>
 
-  <section>
-    <h2>Style Adaptation</h2>
-
-    <h3>StyleSpeech2 (with style)</h3>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_ipa/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_ipa/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/en_2.wav"></audio>
-        </div>
-    </div>
-
-    <h3>StyleSpeech2 (without style)</h3>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_wos/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_wos/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_wos/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_wos/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_wos/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_wos/en_2.wav"></audio>
-        </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Duration Label</h2>
-    <h3>StyleSpeech2 (with label)</h3>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_wl/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_wl/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_wl/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_wl/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_wl/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_wl/en_2.wav"></audio>
-        </div>
-    </div>
-
-    <h3>StyleSpeech2 (no label)</h3>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_ipa/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_ipa/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/en_2.wav"></audio>
-        </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Token Type</h2>
-    <h3>Alphabet</h3>
-    <h4>StyleSpeech2</h4>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_alpha/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_alpha/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_alpha/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_alpha/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_alpha/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_alpha/en_2.wav"></audio>
-        </div>
-    </div>
-
-    <h4>StyleSpeech2 + VITS</h4>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_vits_alpha/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_vits_alpha/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_vits_alpha/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_vits_alpha/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_vits_alpha/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_vits_alpha/en_2.wav"></audio>
-        </div>
-    </div>
-
-
-    <h3>IPA</h3>
-    <h4>StyleSpeech2</h4>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_ipa/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_ipa/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/en_2.wav"></audio>
-        </div>
-    </div>
-
-    <h4>StyleSpeech2 + VITS</h4>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_vits_ipa/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_vits_ipa/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_vits_ipa/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_vits_ipa/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_vits_ipa/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_vits_ipa/en_2.wav"></audio>
-        </div>
-    </div>
-
-
-  </section>
-
-  <section>
-    <h2>Vocoder</h2>
-    <h3>MelSpec + WaveGlow</h3>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_mel/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_mel/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_mel/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_mel/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_mel/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_mel/en_2.wav"></audio>
-        </div>
-    </div>
-
-    <h3>Latent + AE Decoder</h3>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
-            <audio controls src="audio/stylespeech2_ipa/ch_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/ch_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
-            <audio controls src="audio/stylespeech2_ipa/en_0.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/en_1.wav"></audio>
-            <audio controls src="audio/stylespeech2_ipa/en_2.wav"></audio>
-        </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Ground Truth</h2>
-    <div class="audio-row">
-        <div>
-            <p>Chinese</p>
+    </tr>
+    <tr>
+      <td>StyleSpeech</td>
+      <td><audio controls src="audio/stylespeech_ch.wav"></audio></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>VITS</td>
+      <td><audio controls src="audio/vits_ch.wav"></audio></td>
+      <td><audio controls src="audio/vits_en.wav"></audio></td>
+    </tr>
+    <tr>
+      <td>IPA-TTS</td>
+      <td>
+        <audio controls src="audio/ipa_tts/ch_0.wav"></audio>
+        <audio controls src="audio/ipa_tts/ch_1.wav"></audio>
+        <audio controls src="audio/ipa_tts/ch_2.wav"></audio>
+    </td>
+    <td>
+        <audio controls src="audio/ipa_tts/en_0.wav"></audio>
+        <audio controls src="audio/ipa_tts/en_1.wav"></audio>
+        <audio controls src="audio/ipa_tts/en_2.wav"></audio>
+    </td>
+    </tr>
+    <tr>
+      <td colspan="3"><hr></td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS Base</td>
+      <td>
+        <audio controls src="audio/lanstyletts_base/ch_0.wav"></audio>
+        <audio controls src="audio/lanstyletts_base/ch_1.wav"></audio>
+        <audio controls src="audio/lanstyletts_base/ch_2.wav"></audio>
+    </td>
+    <td>
+        <audio controls src="audio/lanstyletts_base/en_0.wav"></audio>
+        <audio controls src="audio/lanstyletts_base/en_1.wav"></audio>
+        <audio controls src="audio/lanstyletts_base/en_2.wav"></audio>
+    </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS VITS</td>
+      <td>
+        <audio controls src="audio/lanstyletts_vits/ch_0.wav"></audio>
+        <audio controls src="audio/lanstyletts_vits/ch_1.wav"></audio>
+        <audio controls src="audio/lanstyletts_vits/ch_2.wav"></audio>
+    </td>
+    <td>
+        <audio controls src="audio/lanstyletts_vits/en_0.wav"></audio>
+        <audio controls src="audio/lanstyletts_vits/en_1.wav"></audio>
+        <audio controls src="audio/lanstyletts_vits/en_2.wav"></audio>
+    </td>
+    </tr>
+    <tr>
+      <td colspan="3"><hr></td>
+    </tr>
+    <tr>
+        <td>Ground Truth</td>
+        <td>
             <audio controls src="audio/real/ch_0.wav"></audio>
             <audio controls src="audio/real/ch_1.wav"></audio>
             <audio controls src="audio/real/ch_2.wav"></audio>
-        </div>
-        <div>
-            <p>English</p>
+        </td>
+        <td>
             <audio controls src="audio/real/en_0.wav"></audio>
             <audio controls src="audio/real/en_1.wav"></audio>
             <audio controls src="audio/real/en_2.wav"></audio>
-        </div>
-    </div>
-  </section>
+        </td>
+    </tr>
+  </table>
 
+
+  <h2>Ablation Studies</h2>
+  <table>
+    <tr>
+      <th>Method</th>
+      <th>Chinese</th>
+      <th>English</th>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align:left; font-weight:bold; background:#f0f0f0;">
+        Style Adaptation
+      </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS Base (w/o s)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_base_wos/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base_wos/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base_wos/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_base_wos/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base_wos/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base_wos/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS Base (w s)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_base/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_base/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td colspan="3"><hr></td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS VITS (w/o s)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits_wos/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_wos/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_wos/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits_wos/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_wos/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_wos/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS VITS (w s)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align:left; font-weight:bold; background:#f0f0f0;">
+        Style Adaptation
+      </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS Base (Alpha)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_alpha/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_alpha/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_alpha/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_alpha/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_alpha/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_alpha/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS Base (IPA)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_base_wos/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base_wos/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base_wos/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_base_wos/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base_wos/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base_wos/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS Base (IPA + Style)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_base/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_base/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td colspan="3"><hr></td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS VITS (Alpha)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits_alpha/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_alpha/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_alpha/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits_alpha/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_alpha/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_alpha/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS VITS (IPA)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits_wos/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_wos/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_wos/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits_wos/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_wos/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits_wos/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td>LanStyleTTS VITS (IPA + Style)</td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_vits/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_vits/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align:left; font-weight:bold; background:#f0f0f0;">
+        Acoustic Feature & Vocoder
+      </td>
+    </tr>
+    <tr>
+      <td>MelSpec + WaveGlow</td>
+        <td>
+            <audio controls src="audio/lanstyletts_mel/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_mel/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_mel/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_mel/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_mel/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_mel/en_2.wav"></audio>
+        </td>
+    </tr>
+    <tr>
+      <td>Latent + AE Decoder</td>
+        <td>
+            <audio controls src="audio/lanstyletts_base/ch_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/ch_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/ch_2.wav"></audio>
+        </td>
+        <td>
+            <audio controls src="audio/lanstyletts_base/en_0.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/en_1.wav"></audio>
+            <audio controls src="audio/lanstyletts_base/en_2.wav"></audio>
+        </td>
+    </tr>
+  </table>
 </body>
 </html>
